@@ -371,8 +371,14 @@ form .btn-enviar input {
     font-weight: 700;
     cursor: pointer;
     transition: .2s;
-}
 
+.btn-enviar :hover{
+    animation-duration: 0.5s;
+    color: white;
+    border: 0;
+    border-radius: 30px;
+
+}
 /* ESTILO DO RODAPÉ */
 
 footer {
