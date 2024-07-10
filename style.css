@@ -343,10 +343,6 @@ section.sobre .flex {
     color: inherit; /* Mantém a cor do texto herdada */
 }
 
-.no-underline:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse, opcional */
-}
-
 /* ESTILO DO FORMULÁRIO DE CONTATO */
 section.formulario {
     padding: 80px 4%;
