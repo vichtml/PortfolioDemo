@@ -66,7 +66,30 @@ form .btn-enviar input:hover {
 
 
 /* ESTILO DA LOGO FOOTER*/
-.logo-container {
+.footer {
+    background-color: #333; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Espaçamento interno do rodapé */
+    width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+    bottom: 0; /* Alinha o rodapé na parte inferior */
+}
+
+.line-footer {
+    padding: 10px 0; /* Espaçamento entre as linhas do rodapé */
+}
+
+.line-footer.borda {
+    border-top: 1px solid #444; /* Linha de borda superior para separação */
+    margin-top: 10px; /* Espaçamento superior para separar das outras seções */
+}
+
+.flex {
+    display: flex; /* Usa flexbox para organizar os itens em linha */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+}
+
+.logo {
     display: flex; /* Usa flexbox para organizar os itens em linha */
     align-items: center; /* Alinha verticalmente os itens no centro */
 }
@@ -83,6 +106,11 @@ form .btn-enviar input:hover {
 .logo-text {
     margin-left: 10px; /* Espaçamento entre a logo e o texto */
     font-size: 16px; /* Tamanho da fonte, ajuste conforme necessário */
+}
+
+p {
+    margin: 0; /* Remove a margem padrão do parágrafo */
+    font-size: 14px; /* Tamanho da fonte do texto */
 }
 
 /* ESTILO DO CABEÇALHO */
