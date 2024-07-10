@@ -66,13 +66,23 @@ form .btn-enviar input:hover {
 
 
 /* ESTILO DA LOGO FOOTER*/
-.logof{
+.logo-container {
+    display: flex; /* Usa flexbox para organizar os itens em linha */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+}
+
+.logof {
     width: 100px; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
+    height: 100px; /* Ajuste a altura para ser igual à largura para garantir um círculo perfeito */
     display: block; /* Garante que a imagem seja um bloco */
     margin: 0; /* Remove margens automáticas */
     border-radius: 50%; /* Faz a imagem ficar em formato de círculo */
     object-fit: cover; /* Garante que a imagem se ajuste bem dentro do círculo */
+}
+
+.logo-text {
+    margin-left: 10px; /* Espaçamento entre a logo e o texto */
+    font-size: 16px; /* Tamanho da fonte, ajuste conforme necessário */
 }
 
 /* ESTILO DO CABEÇALHO */
