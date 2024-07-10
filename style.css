@@ -175,62 +175,63 @@ header nav.menu-desktop ul li {
     font-size: 40px;
 }
 
-.menu-mobile{
-    background-color: #000;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99999;
-    width: 0%;
-    overflow: hidden;
-    transition: .5s;
+.menu-desktop ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
-.menu-mobile.abrir-menu{
-    width: 70%;
+.menu-desktop ul li {
+    margin: 0 15px;
 }
 
-.menu-mobile.abrir-menu ~ .overlay-menu{
-    display: block;
-}
-
-
-.menu-mobile .btn-fechar{
-    padding: 20px 5%;
-}
-
-.menu-mobile .btn-fechar i{
+.menu-desktop ul li a {
     color: #fff;
-    font-size: 30px;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-.menu-mobile nav ul{
+.menu-mobile {
+    display: none;
+    position: relative;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff; /* Cor do ícone */
+    padding: 10px 15px;
+}
+
+.menu-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 200px;
     text-align: right;
 }
 
-.menu-mobile nav ul li a{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 300;
-    padding: 20px 8%;
-    display: block;
-}   
-
-.menu-mobile nav ul li a:hover{
-    background-color: #fff;
-    color: #000;
+.menu-items li {
+    border-bottom: 1px solid #444;
 }
 
-.overlay-menu{
-    background-color: #000000df;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 88888;
-    display: none;
+.menu-items li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.menu-items li a:hover {
+    background-color: #444;
 }
 
 /* ESTILO DO TOPO DO SITE */
