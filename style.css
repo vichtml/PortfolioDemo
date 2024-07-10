@@ -82,6 +82,7 @@ form .btn-enviar input:hover {
 .line-footer.borda {
     border-top: 1px solid #444; /* Linha de borda superior para separação */
     margin-top: 10px; /* Espaçamento superior para separar das outras seções */
+    text-align: center; /* Centraliza o conteúdo dentro da linha */
 }
 
 .flex {
@@ -109,10 +110,26 @@ form .btn-enviar input:hover {
     color: #fff; /* Ajusta a cor do texto para branco */
 }
 
-p {
+.line-footer.borda p {
+    display: flex; /* Usa flexbox para organizar os itens em linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente no centro */
     margin: 0; /* Remove a margem padrão do parágrafo */
     font-size: 14px; /* Tamanho da fonte do texto */
-    color: #fff; /* Cor da fonte branca */
+}
+
+.line-footer.borda p i {
+    color: #fff; /* Ajusta a cor do ícone para branco */
+    margin-right: 5px; /* Adiciona espaço entre o ícone e o texto */
+}
+
+.line-footer.borda p a {
+    color: #fff; /* Ajusta a cor do link para branco */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+.line-footer.borda p a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao link quando em hover */
 }
 
 /* ESTILO DO CABEÇALHO */
