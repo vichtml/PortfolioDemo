@@ -71,6 +71,8 @@ form .btn-enviar input:hover {
     height: auto; /* Mantém a proporção da imagem */
     display: block; /* Garante que a imagem seja um bloco */
     margin: 0; /* Remove margens automáticas */
+    border-radius: 50%; /* Faz a imagem ficar em formato de círculo */
+    object-fit: cover; /* Garante que a imagem se ajuste bem dentro do círculo */
 }
 
 /* ESTILO DO CABEÇALHO */
