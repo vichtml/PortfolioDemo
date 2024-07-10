@@ -447,6 +447,20 @@ footer .line-footer p a {
         display: none;
     }
 
+    /* Responsivo */
+@media screen and (max-width: 768px) {
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .menu-items {
+        display: none; /* Inicialmente esconde o menu mobile */
+    }
+}
     /* TOPO DO SITE */
 
     section.topo-do-site .flex {
