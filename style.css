@@ -112,6 +112,7 @@ form .btn-enviar input:hover {
 p {
     margin: 0; /* Remove a margem padrão do parágrafo */
     font-size: 14px; /* Tamanho da fonte do texto */
+    color: #fff; /* Cor da fonte branca */
 }
 
 .rights p {
@@ -371,14 +372,15 @@ form .btn-enviar input {
     font-weight: 700;
     cursor: pointer;
     transition: .2s;
+}
 
 .btn-enviar :hover{
     animation-duration: 0.5s;
     color: white;
     border: 0;
     border-radius: 30px;
-
 }
+
 /* ESTILO DO RODAPÉ */
 
 footer {
