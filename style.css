@@ -106,11 +106,19 @@ form .btn-enviar input:hover {
 .logo-text {
     margin-left: 10px; /* Espaçamento entre a logo e o texto */
     font-size: 16px; /* Tamanho da fonte, ajuste conforme necessário */
+    color: #fff; /* Cor da fonte branca */
 }
 
 p {
     margin: 0; /* Remove a margem padrão do parágrafo */
     font-size: 14px; /* Tamanho da fonte do texto */
+}
+
+.rights p {
+    background-color: #00008B; /* Cor de fundo azul escuro */
+    color: #fff; /* Cor da fonte branca */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
 }
 
 /* ESTILO DO CABEÇALHO */
