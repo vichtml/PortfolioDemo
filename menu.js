@@ -12,10 +12,3 @@ overlay.addEventListener('click', () => {
     overlay.style.display = 'none'; // Esconde o overlay ao fechar o menu
 });
 
-document.getElementById('btn-menu').addEventListener('click', function() {
-    document.getElementById('menu-mobile').style.display = 'block';
-});
-
-document.querySelector('.btn-fechar').addEventListener('click', function() {
-    document.getElementById('menu-mobile').style.display = 'none';
-});
