@@ -54,16 +54,15 @@ form .btn-enviar input:hover {
     transform: scale(1.05);
 }
 
-/* ESTILO DA LOGO HEADER*/
-.logoh{
+.logoh {
     width: 100px; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Garante que a imagem seja um bloco */
-    margin: 0; /* Remove margens automáticas */
+    height: 100px; /* Define a altura para ser igual à largura */
     border-radius: 50%; /* Faz a imagem ficar em formato de círculo */
     object-fit: cover; /* Garante que a imagem se ajuste bem dentro do círculo */
+    display: block; /* Garante que a imagem seja um bloco */
+    margin: 0; /* Remove margens automáticas */
+    overflow: hidden; /* Garante que qualquer parte da imagem que ultrapasse o círculo seja escondida */
 }
-
 
 /* ESTILO DA LOGO FOOTER*/
 .footer {
@@ -273,6 +272,13 @@ section.sobre .flex {
     cursor: pointer;
     margin: 0 5px;
     transition: .2s;
+}
+
+.btn-social :hover{
+    animation-duration: 0.5s;
+    color: white;
+    border: 0;
+    border-radius: 30px;
 }
 
 .no-underline {
