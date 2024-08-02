@@ -31,11 +31,10 @@ body {
     transition: .2s;
 }
 
-.btn-contato :hover{
-    animation-duration: 0.5s;
+.btn-contato button:hover {
     color: white;
-    border: 0;
-    border-radius: 30px;
+    box-shadow: 0px 0px 8px #00008B;
+    transform: scale(1.05);
 }
 
 h2.titulo {
@@ -64,7 +63,7 @@ form .btn-enviar input:hover {
     overflow: hidden; /* Garante que qualquer parte da imagem que ultrapasse o círculo seja escondida */
 }
 
-/* ESTILO DA LOGO FOOTER*/
+/* ESTILO DA LOGO FOOTER */
 .footer {
     background-color: #333; /* Cor de fundo do rodapé */
     color: #fff; /* Cor do texto */
@@ -133,7 +132,9 @@ form .btn-enviar input:hover {
 
 /* ESTILO DO CABEÇALHO */
 header {
-    padding: 40px 4%;
+    padding: 20px 4%;
+    background-color: #000; /* Fundo da navbar */
+    color: #fff; /* Cor do texto */
 }
 
 header>.interface {
@@ -142,31 +143,78 @@ header>.interface {
     justify-content: space-between;
 }
 
-header a {
-    color: #5c5c5c;
+header .logo a img {
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav.menu-desktop {
+    display: flex;
+}
+
+header nav.menu-desktop a {
+    color: #fff;
     text-decoration: none;
-    display: inline-block;
-    transition: .2s;
+    padding: 0 20px;
+    font-size: 16px;
+    transition: color 0.2s;
 }
 
 header nav.menu-desktop a:hover {
+    color: #00008B;
+}
+
+header nav.menu-mobile {
+    display: none;
+}
+
+li{
+    display: inline;
+}
+
+.menu-mobile-button {
+    background: none;
+    border: none;
+    font-size: 24px;
     color: #fff;
-    transform: scale(1.05);
+    cursor: pointer;
 }
 
-header nav ul {
-    list-style-type: none;
+/* MENU MOBILE */
+.menu-mobile-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #000;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
-header nav.menu-desktop ul li {
-    display: inline-block;
-    padding: 0 40px;
+.menu-mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* CABEÇALHO */
-.menu-desktop,
-.btn-contato {
-   display: none;
+.menu-mobile-nav ul li {
+    padding: 15px;
+}
+
+.menu-mobile-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-mobile-nav ul li a:hover {
+    background-color: #00008B;
 }
 
 /* ESTILO DO TOPO DO SITE */
@@ -274,11 +322,10 @@ section.sobre .flex {
     transition: .2s;
 }
 
-.btn-social :hover{
-    animation-duration: 0.5s;
+.btn-social button:hover {
     color: white;
-    border: 0;
-    border-radius: 30px;
+    box-shadow: 0px 0px 8px #00008B;
+    transform: scale(1.05);
 }
 
 .no-underline {
@@ -332,121 +379,41 @@ form .btn-enviar input {
     transition: .2s;
 }
 
-.btn-enviar :hover{
-    animation-duration: 0.5s;
+.btn-enviar input:hover {
     color: white;
-    border: 0;
-    border-radius: 30px;
+    box-shadow: 0px 0px 8px #00008B;
+    transform: scale(1.05);
 }
 
-/* ESTILO DO RODAPÉ */
-
-footer {
-    padding: 40px 4%;
-    box-shadow: 0 0 40px 10px #ffffff1d;
+@keyframes flutuar {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
 }
 
-footer .flex {
-    justify-content: space-between;
-}
+/* ESTILO RESPONSIVO */
+@media (max-width: 768px) {
+    header .menu-desktop {
+        display: none;
+    }
 
-footer .line-footer {
-    padding: 20px 0;
-}
+    header .menu-mobile {
+        display: block;
+    }
 
-.borda {
-    border-top: 2px solid #00008B;
-}
+    header .menu-mobile-nav {
+        display: block;
+    }
 
-footer .line-footer p i {
-    color: #00008B;
-    font-size: 22px;
-}
-
-footer .line-footer p a {
-    color: #fff;
-}
-
-@media screen and (max-width: 1020px) {
-
-    /* CLASSES GERAIS */
-    .flex {
+    .menu-mobile-nav ul {
+        display: flex;
         flex-direction: column;
     }
 
-    .topo-do-site .flex{
-        flex-direction: column-reverse;
-    }
-
-    h2.titulo {
-        font-size: 34px;
-        line-height: 30px;
-    }
-
-    /* TOPO DO SITE */
-
-    section.topo-do-site .flex {
-        gap: 40px;
-    }
-
-    section.topo-do-site {
-        padding: 20px 8%;
-    }
-
-    .topo-do-site h1 {
-        font-size: 30px;
-    }
-
-    .topo-do-site .img-topo-site img {
-        width: 100%;
-    }
-
-    /* ESPECIALIDADES */
-    section.especiliadades {
-        padding: 40px 8%;
-    }
-
-    /* SOBRE */
-    section.sobre {
-        padding: 80px 8%;
-    }
-
-    .sobre .txt-sobre h2 {
-        font-size: 34px;
-        line-height: 35px;
-        text-align: center;
-    }
-    
-    .btn-social{
-        text-align: center;
-    }
-
-    .img-sobre img{
-        width: 30%;
-    }
-
-    /* PORTFÓLIO */
-    section.portfolio {
-        padding: 80px 8%;
-    }
-
-    .img-port {
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
-    }
-    
-    section.portfolio .flex {
-       gap: 60px;
-    }
-
-    /* RODAPÉ */
-    footer .flex {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    footer .line-footer {
-        text-align: center;
+    .menu-mobile-nav ul li {
+        padding: 10px;
     }
 }
