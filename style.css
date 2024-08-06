@@ -131,6 +131,7 @@ header>.interface {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas menores */
 }
 
 header .logo a img {
@@ -172,7 +173,7 @@ header nav.menu-desktop a:hover {
     color: #00008B; /* Cor ao passar o mouse */
 }
 
-/* Ocultar o menu padrão */
+/* Ocultar o menu padrão em telas menores */
 header nav.menu-mobile {
     display: none;
 }
@@ -269,17 +270,35 @@ header nav.menu-mobile {
 }
 
 /* Ajustes de responsividade */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+
     .menu-desktop {
-        display: none; /* Ocultar menu desktop em dispositivos móveis */
+        display: none; /* Oculta o menu desktop em telas pequenas */
     }
 
-    .menu-mobile {
-        display: block; /* Mostrar menu móvel */
+    header .menu-desktop {
+        display: none;
+    }
+
+    header .menu-mobile {
+        display: block;
+    }
+
+    header .menu-mobile-nav {
+        display: block;
+    }
+
+    .menu-mobile-nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-mobile-nav ul li {
+        padding: 10px;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     header {
         padding: 10px 2%;
     }
@@ -296,12 +315,49 @@ header nav.menu-mobile {
         padding: 8px 30px;
         font-size: 16px;
     }
+
+    .topo-do-site h1 {
+        font-size: 32px;
+    }
+
+    .topo-do-site .txt-topo-site p {
+        font-size: 16px;
+    }
+
+    .especiliadades .especialidades-box {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .especiliadades .especialidades-box h3 {
+        font-size: 22px;
+    }
+
+    .btn-social button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 16px;
+    }
+
+    form .btn-enviar input {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
 }
 
 .menu-mobile-nav.active {
     display: block; /* Mostrar o menu móvel quando ativo */
 }
-
 
 /* ESTILO DO TOPO DO SITE */
 section.topo-do-site {
@@ -507,4 +563,65 @@ form .btn-enviar input {
     .menu-mobile-nav ul li {
         padding: 10px;
     }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 2%;
+    }
+
+    header nav.menu-desktop ul li {
+        margin: 0 10px;
+    }
+
+    header nav.menu-desktop a {
+        font-size: 14px;
+    }
+
+    .btn-contato button {
+        padding: 8px 30px;
+        font-size: 16px;
+    }
+
+    .topo-do-site h1 {
+        font-size: 32px;
+    }
+
+    .topo-do-site .txt-topo-site p {
+        font-size: 16px;
+    }
+
+    .especiliadades .especialidades-box {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .especiliadades .especialidades-box h3 {
+        font-size: 22px;
+    }
+
+    .btn-social button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 16px;
+    }
+
+    form .btn-enviar input {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+}
+
+.menu-mobile-nav.active {
+    display: block; /* Mostrar o menu móvel quando ativo */
 }
